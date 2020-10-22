@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="common/css/style.css" />
+    <link rel="stylesheet" href="common/css/bootstrap-datetimepicker.css" />
+
+    <script type="text/javascript" src="//resource.coolmessenger.com/coolschool/resources/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="//resource.coolmessenger.com/coolschool/resources/js/moment.min.js"></script>
+    <script type="text/javascript" src="//resource.coolmessenger.com/coolschool/resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//resource.coolmessenger.com/coolschool/resources/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="//resource.coolmessenger.com/coolschool/resources/js/locales.min.js"></script> <!-- 한글 바꿔주기 위함 -->
+
+    <script type="text/javascript">
+        'use strict';
+
+        $(() => {
+
+            const $datePicker = $('[name="date-picker"]');
+
+            // datepicker onpen event
+            $('[name="date-picker-btn"]').on('click', () => {
+                $datePicker.data("DateTimePicker").show()
+            })
+
+            $datePicker.datetimepicker({
+                sideBySide: true, // 시계를 같이 표시할것인가
+                locale: 'ko', // 언어
+                widgetParent: '[name="date-picker-parent"]', // 부모 선택
+                icons: {
+                    next: 'date-picker-next date-picker-icon',
+                    previous: 'date-picker-prev date-picker-icon',
+                    up: 'date-picker-up date-picker-icon',
+                    down: 'date-picker-down date-picker-icon',
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div name="date-picker-parent">
+        <div name="date-picker">
+            <input type="text" name="date-picker-btn" />
+        </div>
+    </div>
+</body>
+</html>

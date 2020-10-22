@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'NanumSquareRound';
+    src:url(//resource.coolmessenger.com/coolschool/resources/fonts/nanum-square-round/NanumSquareRoundR.woff2) format('woff2'),
+    url(//resource.coolmessenger.com/coolschool/resources/fonts/nanum-square-round/NanumSquareRoundR.woff) format('woff'),
+    url(//resource.coolmessenger.com/coolschool/resources/fonts/nanum-square-round/NanumSquareRoundR.eot) format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[name='date-picker-parent'] {
+    position: relative;
+    * {
+        font-family: NanumSquareRound, sans-serif;
+    }
+    .bootstrap-datetimepicker-widget table td .date-picker-icon:hover {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(//update.coolmessenger.com/_ImageServer/alimi/arrow_add.png);
+        background-color: #eeeeee;
+    }
+    .bootstrap-datetimepicker-widget {
+        position: absolute;
+        border: 1px solid #eeeeee;
+        font-size: 14px;
+        & > .row {
+            padding: 15px;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: row;
+            & > div {
+                width: 50%;
+            }
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            th {
+                padding-bottom: 5px;
+                padding-top: 5px;
+            }
+            td {
+                line-height: initial;
+                span {
+                    margin: 0;
+                }
+            }
+            a {
+                padding: 0;
+            }
+        }
+        .datepicker {
+
+        }
+        .timepicker {
+            padding-left: 30px;
+        }
+    }
+}
+
+.date-picker-icon {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(//update.coolmessenger.com/_ImageServer/alimi/arrow_add.png);
+}
+.date-picker-next {
+}
+.date-picker-prev {
+    transform: rotateY(180deg);
+}
+.date-picker-up {
+    transform: rotate(-90deg);
+}
+.date-picker-down {
+    transform: rotate(90deg);
+}
